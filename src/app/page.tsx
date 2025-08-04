@@ -28,7 +28,7 @@ export default function Home() {
       <main className="flex-1">
         <section className="relative h-[80vh] w-full">
             <Image
-                src="https://placehold.co/1920x1080.png"
+                src="https://i.imgur.com/gVgZyv4.png"
                 alt="Welcome background"
                 fill
                 className="object-cover"
