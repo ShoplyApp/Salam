@@ -1,9 +1,10 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Laptop, ArrowRight } from "lucide-react";
+import { Calendar, Clock, Laptop, ArrowRight, BookOpen } from "lucide-react";
 
 interface CourseCardProps {
   title: string;
@@ -59,6 +60,11 @@ export function CourseCard({ title, description, duration, mode, startDate, regi
           <Button asChild size="lg" className="flex-grow sm:flex-grow-0">
             <Link href={registrationLink} target="_blank" rel="noopener noreferrer">
               Register Now <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="flex-grow sm:flex-grow-0">
+            <Link href="https://drive.google.com/drive/folders/17Yzhmka28KMZWgYUUlhV0Z2QlUQzHCY0?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              Course Material <BookOpen className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </CardFooter>

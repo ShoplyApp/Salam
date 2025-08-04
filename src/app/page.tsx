@@ -17,7 +17,7 @@ export default function Home() {
       startDate: "New batches every month",
       registrationLink: "https://wa.me/97317686200",
       image: {
-        src: "https://i.imgur.com/8Q6Xh2e.jpeg",
+        src: "/images/cybersecurity.jpg", // ✅ Local image
         aiHint: "cybersecurity training network",
       },
     },
@@ -29,7 +29,7 @@ export default function Home() {
         {/* ✅ HERO SECTION WITH BACKGROUND IMAGE */}
         <section className="relative h-[80vh] w-full overflow-hidden">
           <Image
-            src="https://i.imgur.com/Yrxki4m.png"
+            src="/images/back.jpg"
             alt="Background"
             fill
             priority

@@ -13,7 +13,7 @@ export default function CoursesPage() {
       startDate: "New batches every month",
       registrationLink: "https://wa.me/97317686200",
       image: {
-        src: "https://i.imgur.com/8Q6Xh2e.jpeg",
+        src: "/images/cybersecurity.jpg", // ✅ local image
         aiHint: "cybersecurity network",
       },
     },
