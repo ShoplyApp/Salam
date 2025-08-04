@@ -1,9 +1,19 @@
+
+"use client";
+
 import Link from 'next/link';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { School, Phone, Mail, MapPin, Instagram, Linkedin, Music } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-muted text-muted-foreground">
       <div className="container py-12 px-4 md:px-6">
@@ -53,7 +63,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-center">&copy; {new Date().getFullYear()} Al-Salam Training Centre. All rights reserved.</p>
+          <p className="text-sm text-center">&copy; {year} Al-Salam Training Centre. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="https://wa.me/97317686200" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle h-6 w-6 hover:text-primary transition-colors"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
