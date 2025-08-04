@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, Instagram, Linkedin, Music } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Linkedin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export function Footer() {
@@ -74,9 +74,6 @@ export function Footer() {
             </a>
             <a href="https/www.linkedin.com/company/al-salam-training-centre" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6 hover:text-primary transition-colors" />
-            </a>
-            <a href="#" aria-label="TikTok">
-              <Music className="h-6 w-6 hover:text-primary transition-colors" />
             </a>
           </div>
         </div>
