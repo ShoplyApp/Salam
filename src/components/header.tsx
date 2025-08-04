@@ -46,7 +46,10 @@ export function Header() {
             className="h-8 w-8"
             data-ai-hint="logo company"
           />
-          <span className="font-bold text-lg font-headline">Al-Salam Training Centre</span>
+          <span className="text-lg font-headline">
+            <strong className="font-bold text-primary">Al-Salam</strong>
+            <span className="font-normal text-foreground"> Training Centre</span>
+          </span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
@@ -65,7 +68,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <nav className="grid gap-6 text-lg font-medium mt-8">
-                <Link href="/" className="flex items-center gap-4 text-lg font-semibold">
+                <Link href="/" className="flex items-center gap-4 text-lg">
                   <Image
                     src="https://storage.googleapis.com/source-নাট্যদল/85a3c3dd-4519-4676-a72a-4a6f2795861b"
                     alt="Al-Salam Training Centre Logo"
@@ -74,7 +77,10 @@ export function Header() {
                     className="h-8 w-8"
                     data-ai-hint="logo company"
                   />
-                  <span className="font-bold font-headline">Al-Salam Training Centre</span>
+                  <span className="font-headline">
+                    <strong className="font-bold text-primary">Al-Salam</strong>
+                    <span className="font-normal text-foreground"> Training Centre</span>
+                  </span>
                 </Link>
                 {navLinks.map((link) => (
                   <NavLink key={link.href} href={link.href} className="flex items-center gap-4 text-xl">

@@ -29,7 +29,10 @@ export function Footer() {
                 className="h-8 w-8"
                 data-ai-hint="logo company"
               />
-              <span className="text-xl font-bold font-headline text-foreground">Al-Salam Training Centre</span>
+              <span className="text-xl font-headline">
+                <strong className="font-bold text-primary">Al-Salam</strong>
+                <span className="font-normal text-foreground"> Training Centre</span>
+              </span>
             </Link>
             <p className="text-sm">
               Empowering professionals through high-quality training and certification.

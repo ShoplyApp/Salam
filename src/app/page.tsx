@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -21,7 +22,7 @@ export default function Home() {
           <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Welcome to Al-Salam Training Centre
+                Welcome to <strong className="text-primary">Al-Salam</strong> Training Centre
               </h1>
               <p className="mx-auto mt-4 max-w-[700px] text-lg md:text-xl text-neutral-200">
                 Your gateway to professional excellence and career advancement.
