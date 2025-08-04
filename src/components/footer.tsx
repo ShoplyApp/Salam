@@ -19,7 +19,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
-              <Image src="https://storage.googleapis.com/monorepo-prod-project-resources/alsalam-logo.png" alt="Al-Salam Training Centre Logo" width={40} height={40} />
+              <Image src="https://i.imgur.com/gVgZyv4.png" alt="Al-Salam Training Centre Logo" width={40} height={40} />
               <span className="text-xl font-headline">
                 <strong className="font-bold text-primary">Al-Salam</strong>
                 <span className="font-normal text-foreground"> Training Centre</span>
