@@ -18,8 +18,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
-import { sendContactEmail } from "@/ai/flows/send-contact-email-flow";
 import { useState } from "react";
+import { handleFormSubmission } from "@/app/contact/actions";
 
 const formSchema = z.object({
   fullName: z.string().min(2, {
@@ -40,6 +40,9 @@ const formSchema = z.object({
   }),
 });
 
+export type ContactFormData = z.infer<typeof formSchema>;
+
+
 export function ContactForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,7 +62,7 @@ export function ContactForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const result = await sendContactEmail(values);
+      const result = await handleFormSubmission(values);
 
       if (result.success) {
         toast({
