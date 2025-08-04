@@ -75,7 +75,7 @@ export default function ContactPage() {
       
       <div className="mt-16 md:mt-24">
         <h2 className="text-3xl font-bold font-headline text-center mb-8 animate-fade-in-up" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>Our Location</h2>
-        <Link href="https://share.google/ZZkGzyutcQBv8201l" target="_blank" rel="noopener noreferrer">
+        <Link href="https://maps.app.goo.gl/nxEqFqutepPyRyvW8" target="_blank" rel="noopener noreferrer">
             <div className="rounded-lg overflow-hidden shadow-2xl animate-fade-in-up" style={{ animationDelay: '1000ms', animationFillMode: 'forwards' }}>
             <Image
                 src="https://placehold.co/1200x600.png"
