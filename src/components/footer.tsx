@@ -58,7 +58,9 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>Bahrain</span>
+                <a href="https://maps.app.goo.gl/nxEqFqutepPyRyvW8" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Bahrain
+                </a>
               </li>
             </ul>
           </div>
