@@ -22,7 +22,7 @@ export function Footer() {
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <Image
-                src="https://placehold.co/32x32.png"
+                src="https://storage.googleapis.com/source-নাট্যদল/85a3c3dd-4519-4676-a72a-4a6f2795861b"
                 alt="Al-Salam Training Centre Logo"
                 width={32}
                 height={32}
@@ -79,7 +79,7 @@ export function Footer() {
             <a href="https://www.instagram.com/alsalam.training.bh" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Instagram className="h-6 w-6 hover:text-primary transition-colors" />
             </a>
-            <a href="https://www.linkedin.com/company/al-salam-training-centre" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https/www.linkedin.com/company/al-salam-training-centre" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6 hover:text-primary transition-colors" />
             </a>
             <a href="#" aria-label="TikTok">
