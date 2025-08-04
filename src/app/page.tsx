@@ -3,15 +3,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Briefcase, Users } from "lucide-react";
+import { Award, Briefcase, Users, ShieldCheck } from "lucide-react";
+import { CourseCard } from "@/components/course-card";
 
 export default function Home() {
+    const courses = [
+    {
+      title: "CompTIA Security+",
+      icon: ShieldCheck,
+      description: "Build your cybersecurity career with the globally recognized CompTIA Security+ certification. This course covers core cybersecurity knowledge and skills in risk assessment, incident response, forensics, and more.",
+      duration: "6 Weeks",
+      mode: "Online / In-person",
+      startDate: "New batches every month",
+      registrationLink: "https://wa.me/97317686200",
+      image: {
+        src: "https://placehold.co/600x400.png",
+        aiHint: "cybersecurity network"
+      }
+    },
+    // Future courses can be added here
+  ];
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
         <section className="relative h-[80vh] w-full">
           <Image
-            src="https://placehold.co/1200x800.png"
+            src="https://storage.googleapis.com/source-নাট্যদল/85a3c3dd-4519-4676-a72a-4a6f2795861b"
             alt="Modern training environment"
             layout="fill"
             objectFit="cover"
@@ -22,7 +39,7 @@ export default function Home() {
           <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Welcome to <strong className="text-primary">Al-Salam</strong> Training Centre
+                Welcome to <strong className="text-primary">Al-Salam</strong><span className="text-white"> Training Centre</span>
               </h1>
               <p className="mx-auto mt-4 max-w-[700px] text-lg md:text-xl text-neutral-200">
                 Your gateway to professional excellence and career advancement.
@@ -49,7 +66,34 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="why-us" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <section id="courses" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <div className="space-y-2 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
+                <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">
+                  Our Courses
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Explore our range of professional courses designed to advance your career.
+                </p>
+              </div>
+            </div>
+            <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-4xl mx-auto">
+              {courses.map((course, index) => (
+                <div key={index} className="opacity-0 animate-fade-in-up animation-delay-400" style={{ animationFillMode: 'forwards' }}>
+                  <CourseCard {...course} />
+                </div>
+              ))}
+            </div>
+             <div className="text-center mt-12">
+                <Button asChild size="lg">
+                    <Link href="/courses">View All Courses</Link>
+                </Button>
+            </div>
+          </div>
+        </section>
+
+        <section id="why-us" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
