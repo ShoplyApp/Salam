@@ -18,6 +18,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
+import { sendContactEmail } from "@/ai/flows/send-contact-email-flow";
+import { useState } from "react";
 
 const formSchema = z.object({
   fullName: z.string().min(2, {
@@ -40,6 +42,7 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,19 +56,34 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real application, you would handle the form submission here,
-    // e.g., send the data to your server or a third-party service.
-    console.log(values);
-    
-    // Show a success toast
-    toast({
-      title: "Form Submitted!",
-      description: "Thank you for your message. We will get back to you soon.",
-    });
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const result = await sendContactEmail(values);
 
-    // Reset the form
-    form.reset();
+      if (result.success) {
+        toast({
+          title: "Form Submitted!",
+          description: "Thank you for your message. We will get back to you soon.",
+        });
+        form.reset();
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Error",
+          description: "There was a problem sending your message. Please try again later.",
+        });
+      }
+    } catch (error) {
+      console.error("Failed to submit contact form", error);
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "There was a problem sending your message. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -162,8 +180,8 @@ export function ContactForm() {
               )}
             />
             <div className="flex justify-center">
-                <Button type="submit" size="lg">
-                    Send Message <Send className="ml-2 h-4 w-4" />
+                <Button type="submit" size="lg" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"} <Send className="ml-2 h-4 w-4" />
                 </Button>
             </div>
           </form>
