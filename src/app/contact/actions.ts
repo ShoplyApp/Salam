@@ -1,5 +1,5 @@
 
-'use server';
+//'use server';
 
 import { sendContactEmail, type ContactFormData } from '@/ai/flows/send-contact-email-flow';
 
