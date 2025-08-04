@@ -38,7 +38,7 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
           <School className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg font-headline">Al-Salam Training Hub</span>
+          <span className="font-bold text-lg font-headline">Al-Salam Training Centre</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
@@ -59,7 +59,7 @@ export function Header() {
               <nav className="grid gap-6 text-lg font-medium mt-8">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
                   <School className="h-6 w-6 text-primary" />
-                  <span className="font-bold font-headline">Al-Salam Training Hub</span>
+                  <span className="font-bold font-headline">Al-Salam Training Centre</span>
                 </Link>
                 {navLinks.map((link) => (
                   <NavLink key={link.href} href={link.href} className="flex items-center gap-4 text-xl">

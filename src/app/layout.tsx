@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Al-Salam Training Hub",
+  title: "Al-Salam Training Centre",
   description: "Professional Training and Certification Center",
 };
 

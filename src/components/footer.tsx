@@ -11,7 +11,7 @@ export function Footer() {
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <School className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold font-headline text-foreground">Al-Salam Training Hub</span>
+              <span className="text-xl font-bold font-headline text-foreground">Al-Salam Training Centre</span>
             </Link>
             <p className="text-sm">
               Empowering professionals through high-quality training and certification.

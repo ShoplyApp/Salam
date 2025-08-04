@@ -10,7 +10,7 @@ export default function Home() {
       <main className="flex-1">
         <section className="relative h-[80vh] w-full">
           <Image
-            src="https://placehold.co/1920x1080.png"
+            src="https://storage.googleapis.com/maker-studio-56966.appspot.com/user-assets/e613f569-b54c-4e81-a18c-d68a983b7493/e613f569-b54c-4e81-a18c-d68a983b7493.png"
             alt="Modern training environment"
             layout="fill"
             objectFit="cover"
@@ -21,7 +21,7 @@ export default function Home() {
           <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Welcome to Al-Salam Training Hub
+                Welcome to Al-Salam Training Centre
               </h1>
               <p className="mx-auto mt-4 max-w-[700px] text-lg md:text-xl text-neutral-200">
                 Your gateway to professional excellence and career advancement.
