@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -53,7 +54,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="https://alsalamtraining.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">alsalamtraining.com</a>
+                <a href="mailto:Dr.m@alsalamtraining.com" className="hover:text-primary transition-colors">Dr.m@alsalamtraining.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-primary" />

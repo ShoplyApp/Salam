@@ -1,6 +1,7 @@
+
 import Image from "next/image";
 import { ContactCard } from "@/components/contact-card";
-import { Phone, Globe, Instagram, Linkedin, Music } from "lucide-react";
+import { Phone, Globe, Instagram, Linkedin, Music, Mail } from "lucide-react";
 
 export default function ContactPage() {
   const contactOptions = [
@@ -15,6 +16,12 @@ export default function ContactPage() {
       title: "WhatsApp Chat",
       value: "wa.me/97317686200",
       href: "https://wa.me/97317686200",
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      value: "Dr.m@alsalamtraining.com",
+      href: "mailto:Dr.m@alsalamtraining.com",
     },
     {
       icon: Globe,
