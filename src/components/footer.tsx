@@ -2,9 +2,10 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { School, Phone, Mail, MapPin, Instagram, Linkedin, Music } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Linkedin, Music } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export function Footer() {
@@ -20,7 +21,13 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
-              <School className="h-8 w-8 text-primary" />
+              <Image
+                src="https://storage.googleapis.com/maker-studio-56966.appspot.com/user-assets/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56.png"
+                alt="Al-Salam Training Centre Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="text-xl font-bold font-headline text-foreground">Al-Salam Training Centre</span>
             </Link>
             <p className="text-sm">

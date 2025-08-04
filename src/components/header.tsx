@@ -2,10 +2,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { Menu, School, Home, Mail, BookOpen } from "lucide-react";
+import { Menu, Home, Mail, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => {
@@ -37,7 +38,13 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
-          <School className="h-6 w-6 text-primary" />
+          <Image
+            src="https://storage.googleapis.com/maker-studio-56966.appspot.com/user-assets/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56.png"
+            alt="Al-Salam Training Centre Logo"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
           <span className="font-bold text-lg font-headline">Al-Salam Training Centre</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
@@ -57,8 +64,14 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <nav className="grid gap-6 text-lg font-medium mt-8">
-                <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
-                  <School className="h-6 w-6 text-primary" />
+                <Link href="/" className="flex items-center gap-4 text-lg font-semibold">
+                  <Image
+                    src="https://storage.googleapis.com/maker-studio-56966.appspot.com/user-assets/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56.png"
+                    alt="Al-Salam Training Centre Logo"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8"
+                  />
                   <span className="font-bold font-headline">Al-Salam Training Centre</span>
                 </Link>
                 {navLinks.map((link) => (
