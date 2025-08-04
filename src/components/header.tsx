@@ -39,11 +39,12 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
           <Image
-            src="https://storage.googleapis.com/maker-studio-56966.appspot.com/user-assets/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56.png"
+            src="https://placehold.co/32x32.png"
             alt="Al-Salam Training Centre Logo"
             width={32}
             height={32}
             className="h-8 w-8"
+            data-ai-hint="logo company"
           />
           <span className="font-bold text-lg font-headline">Al-Salam Training Centre</span>
         </Link>
@@ -66,11 +67,12 @@ export function Header() {
               <nav className="grid gap-6 text-lg font-medium mt-8">
                 <Link href="/" className="flex items-center gap-4 text-lg font-semibold">
                   <Image
-                    src="https://storage.googleapis.com/maker-studio-56966.appspot.com/user-assets/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56.png"
+                    src="https://placehold.co/32x32.png"
                     alt="Al-Salam Training Centre Logo"
                     width={32}
                     height={32}
                     className="h-8 w-8"
+                    data-ai-hint="logo company"
                   />
                   <span className="font-bold font-headline">Al-Salam Training Centre</span>
                 </Link>

@@ -22,11 +22,12 @@ export function Footer() {
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <Image
-                src="https://storage.googleapis.com/maker-studio-56966.appspot.com/user-assets/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56/e167c1e5-8a2e-4b71-97b7-68b21c0e7d56.png"
+                src="https://placehold.co/32x32.png"
                 alt="Al-Salam Training Centre Logo"
                 width={32}
                 height={32}
                 className="h-8 w-8"
+                data-ai-hint="logo company"
               />
               <span className="text-xl font-bold font-headline text-foreground">Al-Salam Training Centre</span>
             </Link>

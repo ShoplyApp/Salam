@@ -10,7 +10,7 @@ export default function Home() {
       <main className="flex-1">
         <section className="relative h-[80vh] w-full">
           <Image
-            src="https://storage.googleapis.com/maker-studio-56966.appspot.com/user-assets/e613f569-b54c-4e81-a18c-d68a983b7493/e613f569-b54c-4e81-a18c-d68a983b7493.png"
+            src="https://placehold.co/1200x800.png"
             alt="Modern training environment"
             layout="fill"
             objectFit="cover"
