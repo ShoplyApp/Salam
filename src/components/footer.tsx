@@ -1,10 +1,7 @@
-
 "use client";
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
 import { Phone, Mail, MapPin, Instagram, Linkedin, Music } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -18,7 +15,7 @@ export function Footer() {
   return (
     <footer className="bg-muted text-muted-foreground">
       <div className="container py-12 px-4 md:px-6">
-        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <Image
@@ -63,14 +60,6 @@ export function Footer() {
                 <span>Bahrain</span>
               </li>
             </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold font-headline text-foreground mb-4">Newsletter</h3>
-            <p className="mb-4 text-sm">Stay updated with our latest courses and offers.</p>
-            <form className="flex gap-2">
-              <Input type="email" placeholder="Enter your email" className="bg-background" />
-              <Button type="submit">Subscribe</Button>
-            </form>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
