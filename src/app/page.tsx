@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -7,31 +6,42 @@ import { Award, Briefcase, Users, ShieldCheck } from "lucide-react";
 import { CourseCard } from "@/components/course-card";
 
 export default function Home() {
-    const courses = [
+  const courses = [
     {
       title: "CompTIA Security+",
       icon: ShieldCheck,
-      description: "Build your cybersecurity career with the globally recognized CompTIA Security+ certification. This course covers core cybersecurity knowledge and skills in risk assessment, incident response, forensics, and more.",
+      description:
+        "Build your cybersecurity career with the globally recognized CompTIA Security+ certification. This course covers core cybersecurity knowledge and skills in risk assessment, incident response, forensics, and more.",
       duration: "2 Weeks",
       mode: "In-person",
       startDate: "New batches every month",
       registrationLink: "https://wa.me/97317686200",
+      courseMaterialLink: "https://drive.google.com/drive/folders/17Yzhmka28KMZWgYUUlhV0Z2QlUQzHCY0?usp=drive_link",
       image: {
-        src: "https://placehold.co/600x400.png",
-        aiHint: "cybersecurity network"
-      }
+        src: "https://i.imgur.com/8Q6Xh2e.jpeg",
+        aiHint: "cybersecurity training network",
+      },
     },
-    // Future courses can be added here
   ];
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
-        <section className="relative h-[80vh] w-full bg-background">
+        {/* ✅ HERO SECTION WITH BACKGROUND IMAGE */}
+        <section className="relative h-[80vh] w-full overflow-hidden">
+          <Image
+            src="https://i.imgur.com/kP8cW5z.jpeg"
+            alt="Background"
+            fill
+            priority
+            className="object-cover object-center z-0"
+          />
           <div className="absolute inset-0 bg-black/60 z-10" />
           <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-foreground p-4">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Welcome to <strong className="text-primary">Al-Salam</strong><span className="text-white"> Training Centre</span>
+                Welcome to <strong className="text-primary">Al-Salam</strong>
+                <span className="text-white"> Training Centre</span>
               </h1>
               <p className="mx-auto mt-4 max-w-[700px] text-lg md:text-xl text-neutral-200">
                 Your gateway to professional excellence and career advancement.
@@ -43,10 +53,14 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ✅ ABOUT SECTION */}
         <section id="about" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2 opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
+              <div
+                className="space-y-2 opacity-0 animate-fade-in-up animation-delay-200"
+                style={{ animationFillMode: "forwards" }}
+              >
                 <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">
                   Who We Are
                 </h2>
@@ -58,10 +72,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ✅ COURSES SECTION */}
         <section id="courses" className="w-full py-12 md:py-24 lg:py-32 bg-background/80">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="space-y-2 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
+              <div className="space-y-2 opacity-0 animate-fade-in-up" style={{ animationFillMode: "forwards" }}>
                 <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">
                   Our Courses
                 </h2>
@@ -70,25 +85,32 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
             <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-4xl mx-auto">
               {courses.map((course, index) => (
-                <div key={index} className="opacity-0 animate-fade-in-up animation-delay-400" style={{ animationFillMode: 'forwards' }}>
+                <div
+                  key={index}
+                  className="opacity-0 animate-fade-in-up animation-delay-400"
+                  style={{ animationFillMode: "forwards" }}
+                >
                   <CourseCard {...course} />
                 </div>
               ))}
             </div>
-             <div className="text-center mt-12">
-                <Button asChild size="lg">
-                    <Link href="/courses">View All Courses</Link>
-                </Button>
+
+            <div className="text-center mt-12">
+              <Button asChild size="lg">
+                <Link href="/courses">View All Courses</Link>
+              </Button>
             </div>
           </div>
         </section>
 
+        {/* ✅ WHY CHOOSE US SECTION */}
         <section id="why-us" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="space-y-2 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
+              <div className="space-y-2 opacity-0 animate-fade-in-up" style={{ animationFillMode: "forwards" }}>
                 <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">
                   Why Choose Us?
                 </h2>
@@ -97,46 +119,46 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-              <div className="opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl bg-card">
-                  <CardHeader>
-                    <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit">
-                      <Users className="h-8 w-8" />
-                    </div>
-                    <CardTitle className="font-headline mt-4">Professional Trainers</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Learn from certified industry experts with extensive real-world experience and a passion for teaching.</p>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="opacity-0 animate-fade-in-up animation-delay-400" style={{ animationFillMode: 'forwards' }}>
-                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl bg-card">
-                  <CardHeader>
-                    <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit">
-                      <Award className="h-8 w-8" />
-                    </div>
-                    <CardTitle className="font-headline mt-4">Valuable Certifications</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Gain industry-recognized certifications that validate your skills and boost your professional credibility.</p>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="opacity-0 animate-fade-in-up animation-delay-600" style={{ animationFillMode: 'forwards' }}>
-                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl bg-card">
-                  <CardHeader>
-                    <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit">
-                      <Briefcase className="h-8 w-8" />
-                    </div>
-                    <CardTitle className="font-headline mt-4">Career Support</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>We provide comprehensive career guidance and support to help you achieve your professional goals.</p>
-                  </CardContent>
-                </Card>
-              </div>
+              {[
+                {
+                  icon: Users,
+                  title: "Professional Trainers",
+                  content:
+                    "Learn from certified industry experts with extensive real-world experience and a passion for teaching.",
+                },
+                {
+                  icon: Award,
+                  title: "Valuable Certifications",
+                  content:
+                    "Gain industry-recognized certifications that validate your skills and boost your professional credibility.",
+                },
+                {
+                  icon: Briefcase,
+                  title: "Career Support",
+                  content:
+                    "We provide comprehensive career guidance and support to help you achieve your professional goals.",
+                },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`opacity-0 animate-fade-in-up animation-delay-${200 + idx * 200}`}
+                  style={{ animationFillMode: "forwards" }}
+                >
+                  <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl bg-card">
+                    <CardHeader>
+                      <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit">
+                        <item.icon className="h-8 w-8" />
+                      </div>
+                      <CardTitle className="font-headline mt-4">{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p>{item.content}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
             </div>
           </div>
         </section>

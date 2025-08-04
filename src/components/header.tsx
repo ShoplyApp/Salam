@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -9,7 +8,15 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Menu, Home, Mail, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => {
+const NavLink = ({
+  href,
+  children,
+  className,
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}) => {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -37,13 +44,22 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
+        {/* Desktop logo + title */}
         <Link href="/" className="mr-6 flex items-center gap-2">
-          <Image src="https://i.imgur.com/gVgZyv4.png" alt="Al-Salam Training Centre Logo" width={40} height={40} />
+          <Image
+            src="/images/logo.png"
+            alt="Al-Salam Training Centre Logo"
+            width={40}
+            height={40}
+            priority
+          />
           <span className="text-lg font-headline">
             <strong className="font-bold text-primary">Al-Salam</strong>
             <span className="font-normal text-foreground"> Training Centre</span>
           </span>
         </Link>
+
+        {/* Desktop navigation */}
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
             <NavLink key={link.href} href={link.href}>
@@ -51,6 +67,8 @@ export function Header() {
             </NavLink>
           ))}
         </nav>
+
+        {/* Mobile navigation */}
         <div className="ml-auto flex items-center md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -61,13 +79,22 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <nav className="grid gap-6 text-lg font-medium mt-8">
+                {/* Mobile logo + title */}
                 <Link href="/" className="flex items-center gap-4 text-lg">
-                  <Image src="https://i.imgur.com/gVgZyv4.png" alt="Al-Salam Training Centre Logo" width={40} height={40} />
+                  <Image
+                    src="/images/logo.png"
+                    alt="Al-Salam Training Centre Logo"
+                    width={40}
+                    height={40}
+                    priority
+                  />
                   <span className="font-headline">
                     <strong className="font-bold text-primary">Al-Salam</strong>
                     <span className="font-normal text-foreground"> Training Centre</span>
                   </span>
                 </Link>
+
+                {/* Mobile nav links */}
                 {navLinks.map((link) => (
                   <NavLink key={link.href} href={link.href} className="flex items-center gap-4 text-xl">
                     <link.icon className="h-6 w-6" />

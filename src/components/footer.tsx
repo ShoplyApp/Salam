@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -17,9 +16,10 @@ export function Footer() {
     <footer className="bg-card text-muted-foreground">
       <div className="container py-12 px-4 md:px-6">
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+          {/* ✅ LOGO + DESCRIPTION */}
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
-              <Image src="https://i.imgur.com/gVgZyv4.png" alt="Al-Salam Training Centre Logo" width={40} height={40} />
+              <Image src="/images/logo.png" alt="Al-Salam Logo" width={40} height={40} />
               <span className="text-xl font-headline">
                 <strong className="font-bold text-primary">Al-Salam</strong>
                 <span className="font-normal text-foreground"> Training Centre</span>
@@ -29,6 +29,8 @@ export function Footer() {
               Empowering professionals through high-quality training and certification.
             </p>
           </div>
+
+          {/* ✅ QUICK LINKS */}
           <div>
             <h3 className="text-lg font-semibold font-headline text-foreground mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -38,6 +40,8 @@ export function Footer() {
               <li><Link href="/#about" className="hover:text-primary transition-colors">About Us</Link></li>
             </ul>
           </div>
+
+          {/* ✅ CONTACT INFO */}
           <div>
             <h3 className="text-lg font-semibold font-headline text-foreground mb-4">Contact Us</h3>
             <ul className="space-y-3">
@@ -58,16 +62,25 @@ export function Footer() {
             </ul>
           </div>
         </div>
+
+        {/* ✅ COPYRIGHT + SOCIALS */}
         <div className="mt-8 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-center">&copy; {year} Al-Salam Training Centre. All rights reserved.</p>
           <div className="flex items-center gap-4">
+            {/* WhatsApp */}
             <a href="https://wa.me/97317686200" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle h-6 w-6 hover:text-primary transition-colors"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" className="lucide lucide-message-circle h-6 w-6 hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+              </svg>
             </a>
+
+            {/* Instagram */}
             <a href="https://www.instagram.com/alsalam.training.bh" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Instagram className="h-6 w-6 hover:text-primary transition-colors" />
             </a>
-            <a href="https/www.linkedin.com/company/al-salam-training-centre" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+
+            {/* ✅ Fixed LinkedIn */}
+            <a href="https://www.linkedin.com/company/al-salam-training-centre" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6 hover:text-primary transition-colors" />
             </a>
           </div>
