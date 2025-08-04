@@ -12,8 +12,8 @@ export default function Home() {
       title: "CompTIA Security+",
       icon: ShieldCheck,
       description: "Build your cybersecurity career with the globally recognized CompTIA Security+ certification. This course covers core cybersecurity knowledge and skills in risk assessment, incident response, forensics, and more.",
-      duration: "6 Weeks",
-      mode: "Online / In-person",
+      duration: "2 Weeks",
+      mode: "In-person",
       startDate: "New batches every month",
       registrationLink: "https://wa.me/97317686200",
       image: {
