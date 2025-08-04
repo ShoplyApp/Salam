@@ -75,7 +75,7 @@ export default function ContactPage() {
       
       <div className="mt-16 md:mt-24">
         <h2 className="text-3xl font-bold font-headline text-center mb-8 animate-fade-in-up" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>Our Location</h2>
-        <div className="rounded-lg overflow-hidden shadow-2xl animate-fade-in-up" style={{ animationDelay: '1000ms', animationFillMode: 'forwards' }}>
+        <div className="relative rounded-lg overflow-hidden shadow-2xl animate-fade-in-up" style={{ animationDelay: '1000ms', animationFillMode: 'forwards' }}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.094215278784!2d50.5332850759381!3d26.22591697706318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49a8ad0504e765%3A0x153924e650d9972b!2sNordic%20Tower!5e0!3m2!1sen!2sbh!4v1722426462615!5m2!1sen!2sbh"
             width="100%"
@@ -86,6 +86,9 @@ export default function ContactPage() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Nordic Tower Location"
           ></iframe>
+          <Link href="https://maps.app.goo.gl/nxEqFqutepPyRyvW8" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10 cursor-pointer" aria-label="Navigate to location">
+             <div className="sr-only">Click to navigate to our location on Google Maps</div>
+          </Link>
         </div>
       </div>
     </div>
