@@ -26,17 +26,8 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
-        <section className="relative h-[80vh] w-full">
-          <Image
-            src="https://storage.googleapis.com/source-নাট্যদল/85a3c3dd-4519-4676-a72a-4a6f2795861b"
-            alt="Modern training environment"
-            layout="fill"
-            objectFit="cover"
-            className="z-0"
-            data-ai-hint="modern classroom training"
-          />
-          <div className="absolute inset-0 bg-black/60 z-10" />
-          <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
+        <section className="relative h-[80vh] w-full bg-card">
+          <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-foreground p-4">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                 Welcome to <strong className="text-primary">Al-Salam</strong><span className="text-white"> Training Centre</span>
