@@ -1,7 +1,8 @@
 
 import Image from "next/image";
 import { ContactCard } from "@/components/contact-card";
-import { Phone, Globe, Instagram, Linkedin, Music, Mail } from "lucide-react";
+import { ContactForm } from "@/components/contact-form";
+import { Phone, Globe, Instagram, Linkedin, Mail } from "lucide-react";
 
 export default function ContactPage() {
   const contactOptions = [
@@ -41,12 +42,6 @@ export default function ContactPage() {
       value: "Al-Salam Training Centre",
       href: "https://www.linkedin.com/company/al-salam-training-centre/",
     },
-    {
-      icon: Music,
-      title: "TikTok",
-      value: "Follow us!",
-      href: "#",
-    },
   ];
 
   return (
@@ -56,7 +51,7 @@ export default function ContactPage() {
           Get in Touch
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-          We're here to help. Contact us through any of the channels below.
+          We're here to help. Contact us through any of the channels below, or fill out the form.
         </p>
       </div>
 
@@ -71,6 +66,10 @@ export default function ContactPage() {
             />
           </div>
         ))}
+      </div>
+
+      <div className="mt-16 md:mt-24">
+        <ContactForm />
       </div>
       
       <div className="mt-16 md:mt-24">
