@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContactCard } from "@/components/contact-card";
 import { ContactForm } from "@/components/contact-form";
-import { Phone, Globe, Instagram, Linkedin, Mail } from "lucide-react";
+import { Phone, Globe, Instagram, Linkedin, Mail, Send } from "lucide-react";
 
 export default function ContactPage() {
   const contactOptions = [
@@ -26,10 +26,10 @@ export default function ContactPage() {
       href: "mailto:Dr.m@alsalamtraining.com",
     },
     {
-      icon: Globe,
-      title: "Website",
-      value: "alsalamtraining.com",
-      href: "https://alsalamtraining.com/",
+      icon: Send,
+      title: "Contact Us",
+      value: "Fill out our form",
+      href: "#contact-form",
     },
     {
       icon: Instagram,
@@ -69,7 +69,7 @@ export default function ContactPage() {
         ))}
       </div>
 
-      <div className="mt-16 md:mt-24">
+      <div id="contact-form" className="mt-16 md:mt-24 scroll-mt-24">
         <ContactForm />
       </div>
       
