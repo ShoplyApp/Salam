@@ -35,7 +35,7 @@ export default function Home() {
             className="z-0"
             data-ai-hint="modern classroom training"
           />
-          <div className="absolute inset-0 bg-black/50 z-10" />
+          <div className="absolute inset-0 bg-black/60 z-10" />
           <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="courses" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <section id="courses" className="w-full py-12 md:py-24 lg:py-32 bg-background/80">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
               <div className="opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl bg-card">
                   <CardHeader>
                     <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit">
                       <Users className="h-8 w-8" />
@@ -120,7 +120,7 @@ export default function Home() {
                 </Card>
               </div>
               <div className="opacity-0 animate-fade-in-up animation-delay-400" style={{ animationFillMode: 'forwards' }}>
-                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl bg-card">
                   <CardHeader>
                     <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit">
                       <Award className="h-8 w-8" />
@@ -133,7 +133,7 @@ export default function Home() {
                 </Card>
               </div>
               <div className="opacity-0 animate-fade-in-up animation-delay-600" style={{ animationFillMode: 'forwards' }}>
-                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <Card className="text-center p-6 h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl bg-card">
                   <CardHeader>
                     <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit">
                       <Briefcase className="h-8 w-8" />
