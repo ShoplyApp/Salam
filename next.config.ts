@@ -24,6 +24,8 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  // Mark the genkit package as server-only to prevent it from being bundled on the client.
+  serverComponentsExternalPackages: ['genkit'],
 };
 
 export default nextConfig;
