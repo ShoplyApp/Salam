@@ -71,7 +71,7 @@ export function ContactForm() {
         toast({
           variant: "destructive",
           title: "Error",
-          description: "There was a problem sending your message. Please try again later.",
+          description: result.message || "There was a problem sending your message. Please try again later.",
         });
       }
     } catch (error) {

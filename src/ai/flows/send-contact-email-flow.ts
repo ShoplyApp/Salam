@@ -1,9 +1,9 @@
+
 'use server';
 /**
  * @fileOverview A flow for sending a contact email.
  *
  * - sendContactEmail - A function that handles sending the contact form data via email.
- * - ContactFormSchema - The Zod schema for the contact form data.
  * - ContactFormData - The type for the contact form data.
  */
 
@@ -11,23 +11,13 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 import * as nodemailer from 'nodemailer';
 
-export const ContactFormSchema = z.object({
-  fullName: z.string().min(2, {
-    message: 'Full name must be at least 2 characters.',
-  }),
-  email: z.string().email({
-    message: 'Please enter a valid email address.',
-  }),
+const ContactFormSchema = z.object({
+  fullName: z.string(),
+  email: z.string(),
   phone: z.string().optional(),
-  nationality: z.string().min(2, {
-    message: 'Nationality must be at least 2 characters.',
-  }),
-  major: z.string().min(2, {
-    message: 'Major must be at least 2 characters.',
-  }),
-  message: z.string().min(10, {
-    message: 'Message must be at least 10 characters.',
-  }),
+  nationality: z.string(),
+  major: z.string(),
+  message: z.string(),
 });
 
 export type ContactFormData = z.infer<typeof ContactFormSchema>;
@@ -107,7 +97,8 @@ const sendContactEmailFlow = ai.defineFlow(
       return { success: true, message: 'Email sent successfully.' };
     } catch (error) {
       console.error('Error sending email:', error);
-      return { success: false, message: 'Failed to send email.' };
+      const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred.';
+      return { success: false, message: `Failed to send email. ${errorMessage}` };
     }
   }
 );
