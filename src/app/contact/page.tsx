@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 import { ContactCard } from "@/components/contact-card";
 import { ContactForm } from "@/components/contact-form";
 import { Phone, Globe, Instagram, Linkedin, Mail } from "lucide-react";
@@ -74,16 +75,18 @@ export default function ContactPage() {
       
       <div className="mt-16 md:mt-24">
         <h2 className="text-3xl font-bold font-headline text-center mb-8 animate-fade-in-up" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>Our Location</h2>
-        <div className="rounded-lg overflow-hidden shadow-2xl animate-fade-in-up" style={{ animationDelay: '1000ms', animationFillMode: 'forwards' }}>
-          <Image
-            src="https://placehold.co/1200x600.png"
-            alt="Al-Salam Training Centre Location"
-            width={1200}
-            height={600}
-            className="w-full"
-            data-ai-hint="city map"
-          />
-        </div>
+        <Link href="https://share.google/ZZkGzyutcQBv8201l" target="_blank" rel="noopener noreferrer">
+            <div className="rounded-lg overflow-hidden shadow-2xl animate-fade-in-up" style={{ animationDelay: '1000ms', animationFillMode: 'forwards' }}>
+            <Image
+                src="https://placehold.co/1200x600.png"
+                alt="Al-Salam Training Centre Location"
+                width={1200}
+                height={600}
+                className="w-full"
+                data-ai-hint="city map"
+            />
+            </div>
+        </Link>
       </div>
     </div>
   );
