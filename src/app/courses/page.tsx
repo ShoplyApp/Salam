@@ -12,7 +12,6 @@ export default function CoursesPage() {
       mode: "In-person",
       startDate: "New batches every month",
       registrationLink: "https://wa.me/97317686200",
-      courseMaterialLink: "https://drive.google.com/drive/folders/17Yzhmka28KMZWgYUUlhV0Z2QlUQzHCY0?usp=drive_link",
       image: {
         src: "https://i.imgur.com/8Q6Xh2e.jpeg",
         aiHint: "cybersecurity network",

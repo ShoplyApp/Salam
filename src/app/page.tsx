@@ -16,7 +16,6 @@ export default function Home() {
       mode: "In-person",
       startDate: "New batches every month",
       registrationLink: "https://wa.me/97317686200",
-      courseMaterialLink: "https://drive.google.com/drive/folders/17Yzhmka28KMZWgYUUlhV0Z2QlUQzHCY0?usp=drive_link",
       image: {
         src: "https://i.imgur.com/8Q6Xh2e.jpeg",
         aiHint: "cybersecurity training network",
@@ -30,7 +29,7 @@ export default function Home() {
         {/* ✅ HERO SECTION WITH BACKGROUND IMAGE */}
         <section className="relative h-[80vh] w-full overflow-hidden">
           <Image
-            src="https://i.imgur.com/kP8cW5z.jpeg"
+            src="https://i.imgur.com/Yrxki4m.png"
             alt="Background"
             fill
             priority

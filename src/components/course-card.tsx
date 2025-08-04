@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Laptop, ArrowRight, BookOpen } from "lucide-react";
+import { Calendar, Clock, Laptop, ArrowRight } from "lucide-react";
 
 interface CourseCardProps {
   title: string;
@@ -13,14 +13,13 @@ interface CourseCardProps {
   mode: string;
   startDate: string;
   registrationLink: string;
-  courseMaterialLink?: string;
   image: {
     src: string;
     aiHint: string;
   };
 }
 
-export function CourseCard({ title, description, duration, mode, startDate, registrationLink, courseMaterialLink, image }: CourseCardProps) {
+export function CourseCard({ title, description, duration, mode, startDate, registrationLink, image }: CourseCardProps) {
   return (
     <Card className="overflow-hidden transition-shadow hover:shadow-xl w-full flex flex-col md:flex-row">
       <div className="md:w-1/3">
@@ -62,13 +61,6 @@ export function CourseCard({ title, description, duration, mode, startDate, regi
               Register Now <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          {courseMaterialLink && (
-            <Button asChild size="lg" variant="secondary" className="flex-grow sm:flex-grow-0">
-                <Link href={courseMaterialLink} target="_blank" rel="noopener noreferrer">
-                    Course Material <BookOpen className="ml-2 h-4 w-4" />
-                </Link>
-            </Button>
-          )}
         </CardFooter>
       </div>
     </Card>
