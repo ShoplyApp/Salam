@@ -26,7 +26,15 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
-        <section className="relative h-[80vh] w-full bg-card">
+        <section className="relative h-[80vh] w-full">
+            <Image
+                src="https://placehold.co/1920x1080.png"
+                alt="Welcome background"
+                fill
+                className="object-cover"
+                data-ai-hint="modern training"
+            />
+          <div className="absolute inset-0 bg-black/60 z-10" />
           <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-foreground p-4">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">

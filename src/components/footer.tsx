@@ -19,14 +19,6 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
-              <Image
-                src="https://storage.googleapis.com/source-নাট্যদল/e0b7366f-993d-4734-9b2f-915f0732899c"
-                alt="Al-Salam Training Centre Logo"
-                width={32}
-                height={32}
-                className="h-8 w-8"
-                data-ai-hint="logo company"
-              />
               <span className="text-xl font-headline">
                 <strong className="font-bold text-primary">Al-Salam</strong>
                 <span className="font-normal text-foreground"> Training Centre</span>

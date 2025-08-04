@@ -38,14 +38,6 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
-          <Image
-            src="https://storage.googleapis.com/source-নাট্যদল/e0b7366f-993d-4734-9b2f-915f0732899c"
-            alt="Al-Salam Training Centre Logo"
-            width={32}
-            height={32}
-            className="h-8 w-8"
-            data-ai-hint="logo company"
-          />
           <span className="text-lg font-headline">
             <strong className="font-bold text-primary">Al-Salam</strong>
             <span className="font-normal text-foreground"> Training Centre</span>
@@ -69,14 +61,6 @@ export function Header() {
             <SheetContent side="left">
               <nav className="grid gap-6 text-lg font-medium mt-8">
                 <Link href="/" className="flex items-center gap-4 text-lg">
-                  <Image
-                    src="https://storage.googleapis.com/source-নাট্যদল/e0b7366f-993d-4734-9b2f-915f0732899c"
-                    alt="Al-Salam Training Centre Logo"
-                    width={32}
-                    height={32}
-                    className="h-8 w-8"
-                    data-ai-hint="logo company"
-                  />
                   <span className="font-headline">
                     <strong className="font-bold text-primary">Al-Salam</strong>
                     <span className="font-normal text-foreground"> Training Centre</span>
